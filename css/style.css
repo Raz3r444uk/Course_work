@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "open_sans";
+  src: url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sans";
+  src: url("../fonts/opensans-semibold-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-semibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sans";
+  src: url("../fonts/opensans-bold-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: "open_sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.btn {
+  padding: 0;
+}
+
+/* Header */
+
+.container {
+  width: 1920px;
+  margin: 0px auto;
+  padding: 0px 160px;
+}
+
+.header__container-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 160px 29px 160px;
+  align-items: center;
+  background: black;
+}
+
+.header__container-bottom {
+  display: flex;
+  padding: 23px 160px 21px 160px;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+}
+
+.header__logo-link {
+  margin-right: 179px;
+}
+
+.header__navigation {
+  margin-right: auto;
+}
+
+.header__navigation-list {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header__navigation-item:not(:last-child) {
+  margin-right: 62px;
+}
+
+.header__link {
+  display: inline-block;
+  background: url(../img/Header-icon.svg) no-repeat;
+  background-size: 13px 13px;
+  background-position: left center;
+  padding-left: 20px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.header__conatainer-bottom-button {
+  display: inline-block;
+  border: none;
+  background: url(../img/icon-closed.svg) no-repeat;
+  background-position: right center;
+  padding-right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  margin-right: 98px;
+}
+
+.header__container-bottom-list {
+  position: absolute;
+  display:none;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  top: 69px;
+  z-index: 1;
+}
+
+.header__container-bottom-link {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 14px 10px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.header__container-bottom-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Реализм */
+
+#Тинторетто {
+  background: url(../img/Тинторетто1920w.jpg) no-repeat;
+}
+
+#Фридрих {
+  background: url(../img/Фридрих1920w.jpg) no-repeat;
+}
+
+#Леонардо {
+  background: url(../img/Леонардо1920w.jpg) no-repeat;
+}
+
+#Веррокью {
+  background: url(../img/Верроккьо1920w.jpg) no-repeat;
+}
+
+/* Импрессионизм */
+
+#Моне {
+  background: url(../img/Моне1920w.jpg) no-repeat;
+}
+
+#Сислей {
+  background: url(../img/Сислей1920w.jpg) no-repeat;
+}
+
+#Мане {
+  background: url(../img/Мане1920w.jpg) no-repeat;
+}
+
+#Ренуар {
+  background: url(../img/Ренуар1920w.jpg) no-repeat;
+}
+
+/* Постимпрессионизм */
+
+#ВанГог {
+  background: url(../img/Вангог1920w.jpg) no-repeat;
+}
+
+#Сезанн {
+  background: url(../img/Сезан1920w.jpg) no-repeat;
+}
+
+#Гоген {
+  background: url(../img/Гоген1920w.jpg) no-repeat;
+}
+
+#Сёра {
+  background: url(../img/Сёра1920w.jpg) no-repeat;
+}
+
+/* Авангард */
+
+#Кандинский {
+  background: url(../img/Кандинский1920w.jpg) no-repeat;
+}
+
+#Маринетти {
+  background: url(../img/Маринетти1920w.jpg) no-repeat;
+}
+
+#Малевич {
+  background: url(../img/Малевич1920w.jpg) no-repeat;
+}
+
+#Пикассо {
+  background: url(../img/Пикассо1920w.jpg) no-repeat;
+}
+
+/* Футуризм  */
+
+#Карра {
+  background: url(../img/Карра1920w.jpg) no-repeat;
+}
+
+#Прателла {
+  background: url(../img/Прателла1920w.jpg) no-repeat;
+}
+
+#Северини {
+  background: url(../img/Северини1920w.jpg) no-repeat;
+}
+
+#Балла {
+  background: url(../img/Балла1920w.jpg) no-repeat;
+}
