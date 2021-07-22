@@ -6,153 +6,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blanchard</title>
     <link rel="stylesheet" href="css/choices.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__container-top container">
-        <a href="#" class="header__logo-link">
-          <picture>
-            <source media="(min-width: 1920px)" srcset="img/Лого-1920w.svg" />
-            <source media="(min-width: 1024px)" srcset="#" />
-            <source media="(min-width: 768px)" srcset="#" />
-            <source media="(min-width: 320px)" srcset="#" />
-            <img src="img/Лого-1920w.svg" alt="Blanchard" />
-          </picture>
-        </a>
-        <div class="header__navigation">
-          <ul class="header__navigation-list">
-            <li class="header__navigation-item">
-              <a href="#">О нас</a>
-            </li>
-            <li class="header__navigation-item">
-              <a href="#">Галерея</a>
-            </li>
-            <li class="header__navigation-item">
-              <a href="#">Каталог</a>
-            </li>
-            <li class="header__navigation-item">
-              <a href="#">События</a>
-            </li>
-            <li class="header__navigation-item">
-              <a href="#">Издания</a>
-            </li>
-            <li class="header__navigation-item">
-              <a href="#">Проекты</a>
-            </li>
-            <li class="header__navigation-item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
+    <div class="top-wrapper">
+      <header class="header">
+        <div class="header__container-top">
+          <div class="container header__container-top-content">
+            <a href="#" class="header__logo-link">
+              <picture>
+                <source
+                  media="(max-width: 1920px)"
+                  srcset="img/Лого-1920w.svg"
+                />
+                <source media="(min-width: 1024px)" srcset="img/Лого-1024w.svg" />
+                <source media="(min-width: 768px)" srcset="img/Лого-768w.svg" />
+                <source media="(min-width: 320px)" srcset="img/Лого-320w.svg" />
+                <img src="img/Лого-1920w.svg" alt="Blanchard" />
+              </picture>
+            </a>
+            <div class="header__navigation">
+              <ul class="header__navigation-list">
+                <li class="header__navigation-item">
+                  <a href="#" class="header__navigation-link">О нас</a>
+                </li>
+                <li class="header__navigation-item">
+                  <a href="#" class="header__navigation-link">Галерея</a>
+                </li>
+                <li class="header__navigation-item">
+                  <a href="#" class="header__navigation-link">Каталог</a>
+                </li>
+                <li class="header__navigation-item">
+                  <a href="#" class="header__navigation-link">События</a>
+                </li>
+                <li class="header__navigation-item">
+                  <a href="#" class="header__navigation-link">Издания</a>
+                </li>
+                <li class="header__navigation-item">
+                  <a href="#" class="header__navigation-link">Проекты</a>
+                </li>
+                <li class="header__navigation-item">
+                  <a href="#" class="header__navigation-link">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <span>
+              <a href="#" class="header__link">Войти</a>
+            </span>
+          </div>
         </div>
-        <span>
-          <a href="#" class="header__link">Войти</a>
-        </span>
+
+        <div class="header__container-bottom">
+          <div class="container header__container-bottom-content">
+            <ul class="container-bottom-content__list">
+              <li class="container-bottom-content__list-item">
+                <button class="btn container-bottom-content__button">
+                  Реализм
+                </button>
+                <ul class="container-bottom-list__inside-list">
+                  <li
+                    id="Тинторетто"
+                    class="container-bottom-list__inside-item"
+                  >
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Тинторетто</a
+                    >
+                  </li>
+                  <li id="Фридрих" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Фридрих</a
+                    >
+                  </li>
+                  <li id="Леонардо" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Леонардо</a
+                    >
+                  </li>
+                  <li id="Веррокью" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Веррокью</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="container-bottom-content__list-item">
+                <button class="btn container-bottom-content__button">
+                  Импрессионизм
+                </button>
+                <ul class="container-bottom-list__inside-list">
+                  <li id="Моне" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Моне</a
+                    >
+                  </li>
+                  <li id="Сислей" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Сислей</a
+                    >
+                  </li>
+                  <li id="Мане" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Мане</a
+                    >
+                  </li>
+                  <li id="Ренуар" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Ренуар</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="container-bottom-content__list-item">
+                <button class="btn container-bottom-content__button">
+                  Постимпрессионизм
+                </button>
+                <ul class="container-bottom-list__inside-list">
+                  <li id="ВанГог" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Ван Гог</a
+                    >
+                  </li>
+                  <li id="Сезанн" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Сезанн</a
+                    >
+                  </li>
+                  <li id="Гоген" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Гоген</a
+                    >
+                  </li>
+                  <li id="Сёра" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Сёра</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="container-bottom-content__list-item">
+                <button class="btn container-bottom-content__button">
+                  Авангард
+                </button>
+                <ul class="container-bottom-list__inside-list">
+                  <li
+                    id="Кандинский"
+                    class="container-bottom-list__inside-item"
+                  >
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Кандинский</a
+                    >
+                  </li>
+                  <li id="Маринетти" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Маринетти</a
+                    >
+                  </li>
+                  <li id="Малевич" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Малевич</a
+                    >
+                  </li>
+                  <li id="Пикассо" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Пикассо</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="container-bottom-content__list-item">
+                <button class="btn container-bottom-content__button">
+                  Футуризм
+                </button>
+                <ul class="container-bottom-list__inside-list">
+                  <li id="Карра" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Карра</a
+                    >
+                  </li>
+                  <li id="Прателла" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Прателла</a
+                    >
+                  </li>
+                  <li id="Северини" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Северини</a
+                    >
+                  </li>
+                  <li id="Балла" class="container-bottom-list__inside-item">
+                    <a href="#" class="container-bottom-list__inside-link"
+                      >Балла</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <input
+              type="search"
+              placeholder="Поиск по сайту"
+              spellcheck="false"
+              class="header__container-bottom-input"
+            />
+          </div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero__container container">
+          <article class="hero__content">
+            <h1 class="hero__title">Прикоснитесь к прекрасному</h1>
+            <p class="hero__description">
+              Мы вынуждены отталкиваться от того, что реализация намеченных
+              плановых заданий создаёт предпосылки для новых предложений.
+            </p>
+            <button class="btn hero__button">Подписаться на рассылку</button>
+          </article>
+        </div>
+      </section>
+      <div class="swiper-container slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide slide-1"></div>
+          <div class="swiper-slide slide slide-2"></div>
+          <div class="swiper-slide slide slide-3"></div>
+        </div>
       </div>
-
-      <div class="header__container-bottom container">
-
-        <div>
-          <button class="btn header__conatainer-bottom-button">Реализм</button>
-          <ul class="header__container-bottom-list">
-            <li id="Тинторетто" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Тинторетто</a>
-            </li>
-            <li id="Фридрих" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Фридрих</a>
-            </li>
-            <li id="Леонардо" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Леонардо</a>
-            </li>
-            <li id="Веррокью" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Веррокью</a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <button class="btn header__conatainer-bottom-button">
-            Импрессионизм
-          </button>
-          <ul class="header__container-bottom-list">
-            <li id="Моне" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Моне</a>
-            </li>
-            <li id="Сислей" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Сислей</a>
-            </li>
-            <li id="Мане" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Мане</a>
-            </li>
-            <li id="Ренуар" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Ренуар</a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <button class="btn header__conatainer-bottom-button">
-            Постимпрессионизм
-          </button>
-          <ul class="header__container-bottom-list">
-            <li id="ВанГог" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Ван Гог</a>
-            </li>
-            <li id="Сезанн" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Сезанн</a>
-            </li>
-            <li id="Гоген" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Гоген</a>
-            </li>
-            <li id="Сёра" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Сёра</a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <button class="btn header__conatainer-bottom-button">Авангард</button>
-          <ul class="header__container-bottom-list">
-            <li id="Кандинский" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Кандинский</a>
-            </li>
-            <li id="Маринетти" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Маринетти</a>
-            </li>
-            <li id="Малевич" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Малевич</a>
-            </li>
-            <li id="Пикассо" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Пикассо</a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <button class="btn header__conatainer-bottom-button">Футуризм</button>
-          <ul class="header__container-bottom-list">
-            <li id="Карра" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Карра</a>
-            </li>
-            <li id="Прателла" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Прателла</a>
-            </li>
-            <li id="Северини" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Северини</a>
-            </li>
-            <li id="Балла" class="header__container-bottom-item">
-              <a href="#" class="header__container-bottom-link">Балла</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-    <main>
-      <section class="hero"></section>
-    </main>
+    </div>
 
     <script src="js/choices.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="js/base.js" type="text/javascript"></script>
   </body>
 </html>
