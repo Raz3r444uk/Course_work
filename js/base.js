@@ -1,27 +1,26 @@
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper(".swiper-container", {
   allowTouchMove: false,
   slidesPerView: 1,
   loop: true,
-  effect: 'fade',
+  effect: "fade",
   speed: 5000,
   autoplay: {
-    delay: 5000
-  }
+    delay: 5000,
+  },
 });
 
-const element = document.querySelector('select');
+const element = document.querySelector("select");
 const choices = new Choices(element, {
   searchEnabled: false,
-  position: 'bottom',
-  itemSelectText: '',
-})
-
+  position: "bottom",
+  itemSelectText: "",
+});
 
 const params = {
   btnClassName: "container-bottom-content__button",
   activeClassName: "is-active",
-  disabledClassName: "is-disabled"
-}
+  disabledClassName: "is-disabled",
+};
 
 function onDisable(evt) {
   if (evt.target.classList.contains(params.disabledClassName)) {
@@ -63,3 +62,41 @@ function setMenuListener() {
 
 setMenuListener();
 
+let gallerySlider = new Swiper(".galary-swiper", {
+  slidesPerColumnFill: "row",
+  slidesPerView: 1,
+  slidesPerColumn: 1,
+  spaceBetween: 20,
+  pagination: {
+    el: ".galary .galary-swiper__navigation-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".arrow-right",
+    prevEl: ".arrow-left",
+  },
+
+  breakpoints: {
+    581: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      spaceBetween: 30,
+    },
+
+    1200: {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      spaceBetween: 50,
+    },
+  },
+  
+  a11y: false,
+
+  on: {
+    beforeResize: function () {
+      this.slides.forEach((el) => {
+        el.style.marginTop = "";
+      });
+    },
+  },
+});
