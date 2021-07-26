@@ -12,7 +12,8 @@ const swiper = new Swiper(".swiper-container", {
 const element = document.querySelector("select");
 const choices = new Choices(element, {
   searchEnabled: false,
-  position: "bottom",
+  position: "",
+  placeholder: true,
   itemSelectText: "",
 });
 

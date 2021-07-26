@@ -743,6 +743,7 @@ input[type="search"]::-moz-placeholder {
 }
 
 .choices {
+  color: white;
   margin-top: 9px;
 }
 
@@ -752,6 +753,10 @@ input[type="search"]::-moz-placeholder {
 
 .choices:focus {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.choices__list [data-id="1"] {
+  display: none;
 }
 
 .choices__inner {
@@ -816,9 +821,13 @@ input[type="search"]::-moz-placeholder {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+#Живопись {
+  display: none;
+}
+
 .container-info__content {
   position: absolute;
-  top: 0;
+  bottom: 100%;
   left: 0;
   width: 100%;
   color: white;
@@ -909,7 +918,7 @@ input[type="search"]::-moz-placeholder {
 .galary-slide {
   position: relative;
   overflow: hidden;
-  background-color: #926B88;
+  background-color: #926b88;
 }
 
 .galary-slide::before {
