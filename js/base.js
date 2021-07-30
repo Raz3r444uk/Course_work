@@ -1,4 +1,5 @@
-const swiper = new Swiper(".swiper-container", {
+// Header swiper//
+const swiper = new Swiper(".slider", {
   allowTouchMove: false,
   slidesPerView: 1,
   loop: true,
@@ -9,6 +10,8 @@ const swiper = new Swiper(".swiper-container", {
   },
 });
 
+// Galary select //
+
 const element = document.querySelector("select");
 const choices = new Choices(element, {
   searchEnabled: false,
@@ -16,6 +19,8 @@ const choices = new Choices(element, {
   placeholder: true,
   itemSelectText: "",
 });
+
+// Header container bottom dropdown//
 
 const params = {
   btnClassName: "container-bottom-content__button",
@@ -63,6 +68,8 @@ function setMenuListener() {
 
 setMenuListener();
 
+// Galary swiper//
+
 let gallerySlider = new Swiper(".galary-swiper", {
   slidesPerColumnFill: "row",
   slidesPerView: 1,
@@ -73,8 +80,8 @@ let gallerySlider = new Swiper(".galary-swiper", {
     type: "fraction",
   },
   navigation: {
-    nextEl: ".arrow-right",
-    prevEl: ".arrow-left",
+    nextEl: ".galary .arrow-right",
+    prevEl: ".galary .arrow-left",
   },
 
   breakpoints: {
@@ -90,7 +97,7 @@ let gallerySlider = new Swiper(".galary-swiper", {
       spaceBetween: 50,
     },
   },
-  
+
   a11y: false,
 
   on: {
@@ -100,4 +107,23 @@ let gallerySlider = new Swiper(".galary-swiper", {
       });
     },
   },
+});
+
+// Catalog tabs //
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".tabs__btn").forEach(function (tabsBtn) {
+    tabsBtn.addEventListener("click", function (event) {
+      const path = event.currentTarget.dataset.path;
+      document.querySelectorAll(".tab-content").forEach(function (tabContent) {
+        tabContent.classList.remove("tab-content-active");
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add("tab-content-active");
+    });
+  });
+});
+
+// Catalog accordeon//
+$(function () {
+  $("#accordion").accordion();
 });

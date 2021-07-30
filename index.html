@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
     />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -255,9 +256,9 @@
                 <label class="container-content-left__label">
                   Фильтр:
                   <select name="select">
-                    <option>Живопись</option>
-                    <option>Рисунок</option>
-                    <option>Скульптура</option>
+                    <option value="painting">Живопись</option>
+                    <option value="drawing">Рисунок</option>
+                    <option value="sculpture">Скульптура</option>
                   </select>
                 </label>
               </div>
@@ -290,7 +291,7 @@
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
-                    <source srcset="img/gal-el5-1920w.jpg" media="(min-width: 1024px)" />
+                    <source srcset="img/gal-el4-1920w.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el4-1920w.jpg" alt="" />
                   </picture>
                 </a>
@@ -430,11 +431,248 @@
           </div>
         </div>
       </section>
+
+      <section id="Каталог" class="catalog">
+        <div class="container catalog__container">
+          <div class="catalog__top-content">
+            <h2 class="catalog__title">Каталог</h2>
+            <ul class="catalog__tabs-list">
+              <li class="catalog__tabs-item">
+                <button class="btn tabs__btn france" data-path="tab-one"></button>
+              </li>
+              <li class="catalog__tabs-item">
+                <button class="btn tabs__btn germany" data-path="tab-two"></button>
+              </li>
+              <li class="catalog__tabs-item">
+                <button class="btn tabs__btn italy" data-path="tab-three"></button>
+              </li>
+              <li class="catalog__tabs-item">
+                <button class="btn tabs__btn russia" data-path="tab-four"></button>
+              </li>
+              <li class="catalog__tabs-item">
+                <button class="btn tabs__btn belgium" data-path="tab-five"></button>
+              </li>
+            </ul>
+          </div>
+          <p class="calataog__description">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример
+            континентально-европейского типа политической культуры, будут объявлены нарушающими
+            общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
+            стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются
+            уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
+          </p>
+
+          <div class="catalog__bottom-content">
+            <div class="bottom-content__painters">
+              <div class="tab-content" data-target="tab-one">
+                <article class="tab-content__country">
+                  <picture class="tab-content__country-BG">
+                    <source media="(max-width: 1920px)" srcset="img/Pol-gogen-1920w(F).jpg" />
+                    <img src="/img/Pol-gogen-1920w(F).jpg" alt="Поль Гоген" />
+                  </picture>
+                  <h3 class="tab-content__country-title">Поль Гоген</h3>
+                  <p class="tab-content__country-date">7 июня 1848 — 9 мая 1903.</p>
+                  <p class="tab-content__country-info">
+                    Французский живописец, скульптор-керамист и график. Наряду с Сезанном и Ван
+                    Гогом был крупнейшим представителем постимпрессионизма. В начале 1870-х годов
+                    начал заниматься живописью как любитель. Ранний период творчества связан с
+                    импрессионизмом. С 1880 года участвовал в выставках импрессионистов. С 1883 года
+                    профессиональный художник. Работы Гогена при жизни не находили спроса, художник
+                    был беден. Картина Гогена «Когда свадьба?» — одна из самых дорогих проданных
+                    картин.
+                  </p>
+                </article>
+              </div>
+
+              <div class="tab-content" data-target="tab-two">
+                <article class="tab-content__country">
+                  <picture class="tab-content__country-BG">
+                    <source media="(max-width: 1920px)" srcset="img/France-1920w(G).jpg" />
+                    <img src="/img/France-1920w(G).jpg" alt="Франц Марк" />
+                  </picture>
+                  <h3 class="tab-content__country-title">Франц Марк</h3>
+                  <p class="tab-content__country-date">8 февраля 1880 — 4 марта 1916.</p>
+                  <p class="tab-content__country-info">
+                    Немецкий живописец, яркий представитель немецкого экспрессионизма. Наряду с
+                    Августом Макке, Василием Кандинским и др. являлся участником и главным
+                    организатором художественного объединения «Синий всадник».
+                  </p>
+                </article>
+              </div>
+
+              <div class="tab-content tab-content-active" data-target="tab-three">
+                <article class="tab-content__country">
+                  <picture class="tab-content__country-BG">
+                    <source media="(max-width: 1920px)" srcset="img/ДоменикоГирландайо1920w.jpg" />
+                    <source media="(min-width: 1024px)" srcset="img/ДоменикоГирландайо1024w.jpg" />
+                    <source media="(min-width: 768px)" srcset="img/ДоменикоГирландайо768w.jpg" />
+                    <source media="(min-width: 320px)" srcset="img/ДоменикоГирландайо320w.jpg" />
+                    <img src="/img/ДоменикоГирландайо 1920w.jpg" alt="Доменико Гирландайо" />
+                  </picture>
+                  <h3 class="tab-content__country-title">Доменико Гирландайо</h3>
+                  <p class="tab-content__country-date">2 июня 1448 — 11 января 1494.</p>
+                  <p class="tab-content__country-info">
+                    Один из ведущих флорентийских художников Кватроченто, основатель художественной
+                    династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной
+                    мастерской, где юный Микеланджело в течение года овладевал профессиональными
+                    навыками. Автор фресковых циклов, в которых выпукло, со всевозможными
+                    подробностями показана домашняя жизнь библейских персонажей (в их роли выступают
+                    знатные граждане Флоренции в костюмах того времени).
+                  </p>
+                </article>
+              </div>
+
+              <div class="tab-content" data-target="tab-four">
+                <article class="tab-content__country">
+                  <picture class="tab-content__country-BG">
+                    <source media="(max-width: 1920px)" srcset="img/Aivazovskyi-1920w(R).jpg" />
+                    <img
+                      src="/img/Aivazovskyi-1920w(R).jpg"
+                      alt="Айвазовский Иван Константинович"
+                    />
+                  </picture>
+                  <h3 class="tab-content__country-title">Айвазовский Иван Константинович</h3>
+                  <p class="tab-content__country-date">29 июля 1817 — 19 апреля 1900.</p>
+                  <p class="tab-content__country-info">
+                    Живописец Главного Морского штаба, действительный тайный советник, академик и
+                    почётный член Императорской Академии художеств, почётный член Академий художеств
+                    в Амстердаме, Риме, Париже, Флоренции и Штутгарте. Наиболее выдающийся художник
+                    армянского происхождения XIX века. Брат армянского историка и архиепископа
+                    Армянской Апостольской Церкви Габриэла Айвазовского. Будучи художником с мировой
+                    известностью, Иван Константинович Айвазовский предпочитал жить и работать на
+                    своей родине — в Крыму. Айвазовский наиболее известен своими морскими пейзажами,
+                    которые составляют больше половины его работ. Художник считается одним из
+                    величайших маринистов всех времён.
+                  </p>
+                </article>
+              </div>
+
+              <div class="tab-content" data-target="tab-five">
+                <article class="tab-content__country">
+                  <picture class="tab-content__country-BG">
+                    <source media="(max-width: 1920px)" srcset="img/rene1920w-(BG).jpg" />
+                    <img src="/img/rene1920w-(BG).jpg" alt="Магритт Рене" />
+                  </picture>
+                  <h3 class="tab-content__country-title">Магритт Рене</h3>
+                  <p class="tab-content__country-date">21 ноября 1898 — 15 августа 1967.</p>
+                  <p class="tab-content__country-info">
+                    Бельгийский художник-сюрреалист. Известен как автор остроумных и вместе с тем
+                    поэтически загадочных картин.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div class="bottom-content__accordion">
+              <div id="accordion">
+                <h3>C 1400 по 1499 гг.</h3>
+                <div class="accordion__content-1400">
+
+                  <ul class="content-1400__list">
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="#">Бенедетто ди Биндо</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="#">Бергоньоне, Амброджо</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="#">Биссоло, Франческо</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="#">Больтраффио, Джованни</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="#">Бонсиньори, Франческо</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="#">Боттичини, Рафаэлло</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="#">Брамантино</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="#">Бреа, Людовико</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="#">Бьяджо д’Антонио Туччи</a>
+                    </li>
+                  </ul>
+
+                  <ul class="content-1400__list">
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Веккьетта</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Андреа Верроккьо</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Доменико Гирландайо</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Беноццо Гоццоли</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Граначчи, Франческо</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Грегорио ди Чекко</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Джованни да Удине</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Джованни ди Паоло</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Джорджоне</a>
+                    </li>
+                  </ul>
+                  <ul class="content-1400__list">
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Парентино, Бернардо</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Пезеллино</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Пьетро Перуджино</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Перуцци, Бальдассаре</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Пизанелло</a>
+                    </li>
+                    <li class="content-1400__item">
+                      <a class="content-1400__link" href="">Пинтуриккьо</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <h3>C 1500 по 1599 гг.</h3>
+                <div></div>
+                <h3>C 1600 по 1699 гг.</h3>
+                <div></div>
+                <h3>C 1700 по 1799 гг.</h3>
+                <div></div>
+                <h3>C 1800 по 1899 гг.</h3>
+                <div></div>
+                <h3>C 1900 по 1999 гг.</h3>
+                <div></div>
+                <h3>C 2000 г.</h3>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="js/choices.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/base.js" type="text/javascript"></script>
   </body>
 </html>
