@@ -125,5 +125,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Catalog accordeon//
 $(function () {
-  $("#accordion").accordion();
+  $("#accordion").accordion({
+    heightStyle: "content",
+    collapsible: "true"
+  })
 });
