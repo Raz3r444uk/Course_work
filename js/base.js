@@ -124,9 +124,40 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Catalog accordeon//
+
 $(function () {
-  $("#accordion").accordion({
+  $("#accordion-belgium").accordion({
     heightStyle: "content",
-    collapsible: "true"
-  })
+    collapsible: "true",
+  });
+  $("#accordion-germany").accordion({
+    heightStyle: "content",
+    collapsible: "true",
+  });
+  $("#accordion-france").accordion({
+    heightStyle: "content",
+    collapsible: "true",
+  });
+  $("#accordion-rus").accordion({
+    heightStyle: "content",
+    collapsible: "true",
+  });
+  $("#accordion-italy").accordion({
+    heightStyle: "content",
+    collapsible: "true",
+  });
+});
+
+// Tabs accordeon //
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".content-1400__link").forEach(function (tabsBtnAccordion) {
+    tabsBtnAccordion.addEventListener("click", function (event) {
+      const path = event.currentTarget.dataset.path;
+      document.querySelectorAll(".tab-content__country").forEach(function (tabContentAccordion) {
+        tabContentAccordion.classList.remove("tab-content__active-accordion");
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add("tab-content__active-accordion");
+    });
+  });
 });
