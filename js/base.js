@@ -420,3 +420,41 @@ class Cards {
 }
 
 const cards = new Cards();
+
+// Projects swiper
+
+let projectsSlider = new Swiper(".projects-swiper", {
+  slidesPerColumnFill: "row",
+  icons: false,
+  slidesPerView: 3,
+  slidesPerColumn: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".projects .arrow-projects-right",
+    prevEl: ".projects .arrow-projects-left",
+  },
+
+  breakpoints: {
+    581: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      spaceBetween: 30,
+    },
+
+    1200: {
+      slidesPerView: 3,
+      slidesPerColumn: 1,
+      spaceBetween: 50,
+    },
+  },
+
+  a11y: false,
+
+  on: {
+    beforeResize: function () {
+      this.slides.forEach((el) => {
+        el.style.marginTop = "";
+      });
+    },
+  },
+});
