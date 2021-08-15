@@ -215,13 +215,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     breakpoints: {
-      581: {
+      1024: {
         slidesPerView: 2,
-        slidesPerColumn: 2,
-        spaceBetween: 30,
+        slidesPerColumn: 1,
+        spaceBetween: 49,
       },
 
-      1200: {
+      1700: {
         slidesPerView: 3,
         slidesPerColumn: 1,
         spaceBetween: 50,
@@ -238,8 +238,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-
-  // Hidden cards //
 
   // Projects swiper
 

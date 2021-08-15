@@ -3122,6 +3122,10 @@ input[type="phone"]::-moz-placeholder {
 
   /* Galary */
 
+  .galary {
+    padding-bottom: 105px;
+  }
+
   .galgary__container-content-left {
     width: calc(296 / 984 * 100%);
     margin-right: 18px;
@@ -3137,6 +3141,97 @@ input[type="phone"]::-moz-placeholder {
     margin-bottom: 28px;
     margin-top: 25px;
   }
+  .container-info__content {
+    width: 284px;
+  }
+
+  /* Catalog */
+
+  .catalog__top-content {
+    margin-bottom: 15px;
+  }
+
+  .catalog__tabs-item {
+    padding-left: 25px;
+    padding-right: 21px;
+  }
+
+  .rectangle-off {
+    width: 437px;
+    height: 274px;
+  }
+
+  .rectangle-off::before {
+    content: "";
+    width: 285px;
+    height: 210px;
+    background-image: url(/img/Tab-content1024w.png);
+    left: 76px;
+    bottom: 36px;
+  }
+
+  .rectangle {
+    width: 189px;
+    height: 130px;
+  }
+
+  .rectangle::after {
+    content: "";
+    width: 173px;
+    height: 114px;
+    right: 6px;
+    top: 6px;
+  }
+
+  .second-line {
+    max-width: 207px;
+  }
+
+  /* Editions */
+
+  .events__item {
+    width: calc(100% / 3 - 20px);
+    min-height: 683px;
+    padding-top: 250px;
+    padding-left: 32px;
+    padding-right: 34px;
+    padding-bottom: 38px;
+    margin-bottom: 50px;
+  }
+
+  .events__item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  .events__item:nth-child(1) {
+    background-image: url(../img/1card1024w.jpg);
+  }
+
+  .events__item:nth-child(2) {
+    background-image: url(../img/2card1024w.jpg);
+  }
+
+  .events__item:nth-child(3) {
+    background-image: url(../img/3card1024w.jpg);
+  }
+
+  .events__item:nth-child(4) {
+    background-image: url(../img/4card1024w.jpg);
+  }
+
+  .events__item:nth-child(5) {
+    background-image: url(../img/5card1024w.jpg);
+  }
+  .editions__container-content-left {
+    width: calc(277/ 924 * 100%);
+  }
+
+  .editions-swiper.swiper-container {
+    width: calc(629/ 924 * 100%);
+  }
+
+
+
 }
 
 @media (min-width: 581px) {
@@ -3145,13 +3240,8 @@ input[type="phone"]::-moz-placeholder {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 1025px) {
-  .events__item {
-    width: calc(100% / 2 - 20px);
-  }
-}
 
-/* @media (max-width: 580px) {
+@media (max-width: 580px) {
   .events__container-cards-container {
     overflow-x: hidden;
   }
@@ -3172,4 +3262,4 @@ input[type="phone"]::-moz-placeholder {
   .pagination {
     text-align: center;
   }
-} */
+}
