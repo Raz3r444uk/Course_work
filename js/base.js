@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerColumn: 2,
         spaceBetween: 30,
       },
-      
+
       974: {
         slidesPerView: 2,
         slidesPerColumn: 2,
@@ -368,6 +368,16 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  document.querySelector(".burger-menu").addEventListener("click", function () {
+    document.querySelector("#menu").classList.toggle("is-active");
+    document.querySelector("#menu").classList.remove("is-closed");
+  });
+
+  document.querySelector(".burger-menu").addEventListener("click", function () {
+    document.querySelector("#Войти").classList.toggle("is-active");
+    document.querySelector("#Войти").classList.remove("is-closed");
+  });
+
+
 });
-
-
