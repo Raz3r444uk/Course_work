@@ -21,6 +21,20 @@ document.addEventListener("DOMContentLoaded", function () {
     itemSelectText: "",
   });
 
+  //header search//
+
+  const searchOpen = document.querySelector(".js-search-open");
+  const form = document.querySelector(".js-search-form");
+  const searchClose = form.querySelector(".js-search-close");
+
+  searchOpen.addEventListener("click", () => {
+    form.classList.add("header__container-bottom-form__active");
+  });
+
+  searchClose.addEventListener("click", () => {
+    form.classList.remove("header__container-bottom-form__active");
+  });
+
   // Header container bottom dropdown//
 
   const params = {
@@ -253,13 +267,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     breakpoints: {
-      581: {
+      1024: {
         slidesPerView: 2,
-        slidesPerColumn: 2,
-        spaceBetween: 30,
+        slidesPerColumn: 1,
+        spaceBetween: 50,
       },
 
-      1200: {
+      1700: {
         slidesPerView: 3,
         slidesPerColumn: 1,
         spaceBetween: 50,
@@ -367,15 +381,48 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  document.querySelector(".burger-menu").addEventListener("click", function () {
-    document.querySelector("#menu").classList.toggle("is-active");
-    document.querySelector("#menu").classList.remove("is-closed");
+  // burger//
+
+  function setBurger(params) {
+    const burger = document.querySelector(`.${params.btnClass}`);
+    const menuBurger = document.querySelector(`.${params.menuClass}`);
+    const connectButton = document.querySelector(`.${params.menuClass}`);
+
+    connectButton.addEventListener("animationend", function () {
+      if (this.classList.contains(params.hiddenClass)) {
+        this.classList.remove(params.activeClass);
+        this.classList.remove(params.hiddenClass);
+      }
+    });
+
+    menuBurger.addEventListener("animationend", function () {
+      if (this.classList.contains(params.hiddenClass)) {
+        this.classList.remove(params.activeClass);
+        this.classList.remove(params.hiddenClass);
+      }
+    });
+
+    burger.addEventListener("click", function () {
+      this.classList.toggle(params.activeClass);
+
+      if (
+        !menuBurger.classList.contains(params.activeClass) &&
+        !menuBurger.classList.contains(params.hiddenClass)
+      ) {
+        menuBurger.classList.add(params.activeClass);
+      } else {
+        menuBurger.classList.add(params.hiddenClass);
+      }
+    });
+  }
+
+  // здесь мы вызываем функцию и передаем в нее классы наших элементов
+
+  setBurger({
+    btnClass: "burger-menu", // класс бургера
+    menuClass: "header__navigation-list", // класс меню
+    connectButton: "header__link",
+    activeClass: "is-opened", // класс открытого состояния
+    hiddenClass: "is-closed", // класс закрывающегося состояния (удаляется сразу после закрытия)
   });
-
-  document.querySelector(".burger-menu").addEventListener("click", function () {
-    document.querySelector("#Войти").classList.toggle("is-active");
-    document.querySelector("#Войти").classList.remove("is-closed");
-  });
-
-
 });

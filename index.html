@@ -20,8 +20,10 @@
       <header class="header">
         <div class="header__container-top">
           <div class="container header__container-top-content">
-            <button class="burger-menu btn">
-              <span></span>
+            <button class="burger-menu btn btn-reset">
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
             </button>
 
             <a class="header__logo-link"> <img src="img/Лого-1920w.svg" alt="Blanchard" /> </a>
@@ -186,14 +188,24 @@
                 </div>
               </li>
             </ul>
-            <form action="" class="header__container-bottom-form">
-              <button type="submit" class="btn container-bottom-form__btn"></button>
+            <button class="btn container-bottom-form__btn js-search-open"></button>
+            <form id="header-form" action="" class="header__container-bottom-form js-search-form">
               <input
                 type="search"
                 placeholder="Поиск по сайту"
                 spellcheck="false"
                 class="container-bottom-form__input"
+                tabindex="-1"
               />
+              <button
+                type="submit"
+                class="btn container-bottom-form__btn-sumbit"
+                tabindex="-1"
+              ></button>
+              <button
+                class="btn container-bottom-form__btn-close js-search-close"
+                tabindex="-1"
+              ></button>
             </form>
           </div>
         </div>
@@ -285,132 +297,154 @@
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el3-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el3-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el3-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el4-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el4-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el4-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el5-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el5-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el5-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el6-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el6-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el6-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el7-1920w.jpg" media="(min-width: 1920px)" />
-                    <img class="galary-image" csr="img/gal-el7-1920w.jpg" alt="" />
+                    <source srcset="img/gal-el7-1024.jpg" media="(min-width: 1024px)" />
+                    <img class="galary-image" src="img/gal-el7-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el8-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el8-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el8-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el9-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el9-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el9-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el10-1920w.jpg" media="(min-width: 1920px)" />
-                    <img class="galary-image" csr="img/gal-el10-1920w.jpg" alt="" />
+                    <source srcset="img/gal-el10-1024.jpg" media="(min-width: 1024px)" />
+                    <img class="galary-image" src="img/gal-el10-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el11-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el11-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el11-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el12-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el12-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el12-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el13-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el13-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el13-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el14-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el14-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el14-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el15-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el15-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el15-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el16-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el16-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el16-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el17-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el17-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el17-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el18-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el18-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el18-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el19-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el19-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el19-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el20-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el20-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el20-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el21-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el21-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el21-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el22-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el22-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el22-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el23-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el23-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el23-1920w.jpg" alt="" />
                   </picture>
                 </a>
                 <a class="swiper-slide galary-slide" href="#">
                   <picture>
                     <source srcset="img/gal-el24-1920w.jpg" media="(min-width: 1920px)" />
+                    <source srcset="img/gal-el24-1024.jpg" media="(min-width: 1024px)" />
                     <img class="galary-image" src="img/gal-el24-1920w.jpg" alt="" />
                   </picture>
                 </a>
@@ -592,9 +626,6 @@
                               >Эдуард Мане</a
                             >
                           </li>
-                        </ul>
-
-                        <ul class="content-1400__list">
                           <li class="content-1400__item">
                             <a class="content-1400__link js-tab-paiters" href="#" data-path="Ренуар"
                               >Огюст Ренуар</a
@@ -616,9 +647,6 @@
                               >Бальдюс, Эдуард-Дени</a
                             >
                           </li>
-                        </ul>
-
-                        <ul class="content-1400__list">
                           <li class="content-1400__item">
                             <a class="content-1400__link js-tab-paiters" href="#" data-path="Брак"
                               >Брак, Жорж</a
@@ -908,9 +936,6 @@
                               >Боненбергер, Теодор</a
                             >
                           </li>
-                        </ul>
-
-                        <ul class="content-1400__list">
                           <li class="content-1400__item">
                             <a
                               class="content-1400__link js-tab-paiters"
@@ -937,8 +962,6 @@
                               >Хейер, Артур</a
                             >
                           </li>
-                        </ul>
-                        <ul class="content-1400__list">
                           <li class="content-1400__item">
                             <a class="content-1400__link js-tab-paiters" href="#" data-path="Хааке"
                               >Хааке, Ханс</a
@@ -1409,9 +1432,7 @@
                               >Бьяджо д’Антонио Туччи</a
                             >
                           </li>
-                        </ul>
 
-                        <ul class="content-1400__list">
                           <li class="content-1400__item">
                             <a
                               class="content-1400__link js-tab-paiters"
@@ -1484,8 +1505,6 @@
                               >Джорджоне</a
                             >
                           </li>
-                        </ul>
-                        <ul class="content-1400__list">
                           <li class="content-1400__item">
                             <a
                               class="content-1400__link js-tab-paiters"
@@ -2199,7 +2218,6 @@
                   <h4 class="item-card__title">Книжная гравюра в живом восприятии</h4>
                   <p class="item-card__info">
                     Один из ведущих флорентийских художников Кватроченто, основатель художественной
-                    <br />
                     династии, которую продолжили его брат Давид и сын Ридольфо.
                   </p>
                   <a href="#" class="item-card__link">Подробнее</a>
@@ -2436,7 +2454,7 @@
                 <div class="swiper-wrapper__card swiper-slide editions-slide">
                   <div class="editions__card">
                     <picture>
-                      <source srcset="img/editions-slide3-1920w.jpg" media="(max-width: 1920px)" />
+                      <source srcset="img/editions-slide3-1920w.jpg" media="(min-width: 1920px)" />
                       <source srcset="img/editions-slide3-1024w.jpg" media="(min-width: 1024px)" />
                       <img
                         class="editions-image"
@@ -2537,8 +2555,7 @@
               деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи.
               А ещё независимые государства смешаны с не уникальными данными до степени совершенной
               неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего,
-              постоянное <br />
-              информационно-пропагандистское 
+              постоянное информационно-пропагандистское 
               <span class="tooltip">
                 <span class="marker" tabindex="0"></span>
                 <span class="popup"
